@@ -252,7 +252,7 @@ class VGG_13_2(nn.Module):
         self.multi_head_cross4 = MultiHeadSelfAttention_cross(512, 512, 512)
         self.multi_head_cross5 = MultiHeadSelfAttention_cross(512, 512, 512)
 
-        # 位置编码
+        # Location Code
         self.pos_embed1 = nn.Parameter(torch.zeros(128, 128, 64))
         self.pos_embed1_ = nn.Parameter(torch.zeros(128, 128, 64))
         self.pos_embed2 = nn.Parameter(torch.zeros(128, 64, 128))
@@ -326,7 +326,7 @@ class VGG_13_2(nn.Module):
         x2 = x2.transpose(1, 2)
 
 
-        # git的第一次尝试11
+
         x1_5 = self.layer5(x1)
         x2_5 = self.layer5_(x2)
         x1 = x1_5.transpose(1, 2)
