@@ -326,7 +326,7 @@ class VGG_13_2(nn.Module):
         x2 = x2.transpose(1, 2)
 
 
-        # git的第一次尝试
+        # git的第一次尝试111
         x1_5 = self.layer5(x1)
         x2_5 = self.layer5_(x2)
         x1 = x1_5.transpose(1, 2)
